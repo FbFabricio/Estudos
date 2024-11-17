@@ -1,4 +1,6 @@
 # atributos de classe  
+# atributos como '_idade' ou '__idade' não dever ser usados
+# fora da classe 
 
 class Pessoa: 
     ano_atual = 2022 # atributo da classe 
@@ -6,6 +8,8 @@ class Pessoa:
     def __init__(self, nome, idade):
         self.nome = nome 
         self.idade = idade 
+        self._idade = idade 
+        self.__idade = idade 
 
 
     def get_ano_nascimento(self):
@@ -17,3 +21,5 @@ p2 = Pessoa('helena', 27)
 print(Pessoa.ano_atual)
 print(p1.get_ano_nascimento())
 print(p2.get_ano_nascimento())
+
+
